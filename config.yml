@@ -1,0 +1,39 @@
+# Configuration for the Algorithmic Trading System
+
+# Data Handler Settings
+data_handler:
+  data_dir: 'data'
+  ticker: 'XAUUSD=X'  # Spot Gold/USD
+  start_date: '2020-01-01'
+  end_date: '2024-01-01'
+  interval: '1d'
+
+# Strategy Settings
+strategy:
+  name: 'rsi_ma_crossover'  # or 'bollinger_bands'
+  parameters:
+    rsi_ma_crossover:
+      rsi_period: 14
+      rsi_buy_threshold: 60
+      rsi_sell_threshold: 40
+      short_ma_period: 10
+      long_ma_period: 30
+    bollinger_bands:
+      bb_period: 20
+      bb_std_dev: 2
+    macd:
+      fast_period: 12
+      slow_period: 26
+      signal_period: 9
+
+# Risk Management Settings
+risk_management:
+  risk_per_trade: 0.01  # 1% of equity
+  total_initial_capital: 100000.0
+  stop_loss_pct: 0.02 # 2% stop loss
+  take_profit_pct: 0.05 # 5% take profit
+
+# Execution Engine Settings
+execution_engine:
+  slippage: 0.001  # 0.1%
+  commission: 1.0   # $1 per trade
