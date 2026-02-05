@@ -82,6 +82,15 @@ The system is designed to be easily extensible. To add a new trading strategy, f
 4.  **Update `main.py`** to include your new strategy as an option.
 5.  **Add the configuration** for your new strategy to `config.yml`.
 
+## Live Trading Readiness
+
+This repository currently runs **backtests only**. Before trading live, you will
+need to implement a broker integration, real-time data ingestion, and a live
+execution loop. If you are working with discretionary concepts like VSA + CAB +
+CISD, please document the exact entry/exit rules first so they can be translated
+into deterministic code. A structured requirements template is available at
+`docs/strategy_requirements.md`.
+
 ## Future Work
 
 This project provides a solid foundation for a backtesting engine, but it is not yet a complete trading system. The following features are planned for future development:
