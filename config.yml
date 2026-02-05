@@ -25,6 +25,11 @@ strategy:
       fast_period: 12
       slow_period: 26
       signal_period: 9
+    vsa_cab_cisd:
+      timeframe: '1h'
+      vsa_rules: {}
+      cab_rules: {}
+      cisd_rules: {}
 
 # Risk Management Settings
 risk_management:
